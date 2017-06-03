@@ -1,0 +1,11 @@
+name:           euclid
+version:        0.0.0
+author:         Herman Bergwerf <hermanbergwerf@gmail.com>
+description:    Algorithms to compute intersections between 2D shapes
+homepage:       https://github.com/hermanbergwerf/euclid
+environment:
+  sdk:          '>=1.8.0 <2.0.0'
+dependencies:
+  vector_math:  ^2.0.4
+dev_dependencies:
+  test:         ^0.12.20+13
