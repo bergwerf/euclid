@@ -16,4 +16,4 @@ part 'src/algorithms/polynomial_roots.dart';
 part 'src/algorithms/quick_constructors.dart';
 part 'src/algorithms/gaussian_elimination.dart';
 part 'src/algorithms/conics_intersection.dart';
-part 'src/algorithms/create_ellipse.dart';
+part 'src/algorithms/create_conics.dart';

@@ -35,3 +35,14 @@ ConicSection createEllipse(Vector2 center, Vector2 semiAxes, num a) {
       // F
       -1 + pow(xt, 2) * G + xt * yt * I + pow(yt, 2) * H);
 }
+
+/// Create straight line conic section from ray [origin] and [direction] vector.
+ConicSection createLineConic(Vector2 origin, Vector2 direction) {
+  // y = ax + b
+  // ax + -1y + b = 0
+  // a = dx / dy
+  // b = -ax + y
+  final a = direction.x / direction.y;
+  final b = -a * origin.x + origin.y;
+  return new ConicSection(0, 0, 0, a, -1, b);
+}

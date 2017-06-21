@@ -50,4 +50,15 @@ void main() {
     expect(ellipse.E, equals(0.20628748027641075));
     expect(ellipse.F, equals(0.3652979160659744));
   });
+
+  test('Line conic construction', () {
+    final line = createLineConic(vec2(3, 3), vec2(1, -1));
+
+    expect(line.A, equals(0));
+    expect(line.B, equals(0));
+    expect(line.C, equals(0));
+    expect(line.D, equals(-1));
+    expect(line.E, equals(-1));
+    expect(line.F, equals(6));
+  });
 }
