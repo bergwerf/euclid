@@ -1,4 +1,4 @@
-% Same test case as in test/conic_intersection_test.dart
+% Same test case as in test/conics_test.dart
 
 a = [-349.9, 377.59, -785.68, 3032.65, 3093.44, -11736.67];
 b = [-100.13, 272.09, -7.59, 196.76, -1453.65, 1938.82];

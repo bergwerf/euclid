@@ -39,4 +39,15 @@ void main() {
 
     // Values are valid, see: https://www.desmos.com/calculator/kkjjxpsnvd.
   });
+
+  test('Ellipse construction', () {
+    final ellipse = createEllipse(vec2(2, 2), vec2(1, 3), -3.1415 / 4);
+
+    expect(ellipse.A, equals(0.5555761452421689));
+    expect(ellipse.B, equals(0.8888888879350348));
+    expect(ellipse.C, equals(0.5555349658689424));
+    expect(ellipse.D, equals(-4.000082356838745));
+    expect(ellipse.E, equals(-3.9999176393458393));
+    expect(ellipse.F, equals(6.9999999961845845));
+  });
 }
