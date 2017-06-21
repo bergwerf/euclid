@@ -14,12 +14,12 @@ ConicSection createEllipse(Vector2 center, Vector2 semiAxes, num a) {
   // Simplify into standard form.
 
   final ax = semiAxes;
-  final sna = sin(a), csa = cos(a);
+  final sna = sin(-a), csa = cos(-a); // For some reason we need to negate [a].
   final xt = center.x, yt = center.y;
 
   final G = pow(csa, 2) / pow(ax.x, 2) + pow(sna, 2) / pow(ax.y, 2);
   final H = pow(sna, 2) / pow(ax.x, 2) + pow(csa, 2) / pow(ax.y, 2);
-  final I = 2 * csa * sna / pow(ax.y, 2) - 2 * csa * sna / pow(ax.x, 2);
+  final I = 2 * csa * sna * (1 / pow(ax.y, 2) - 1 / pow(ax.x, 2));
 
   return new ConicSection(
       // A: x^2

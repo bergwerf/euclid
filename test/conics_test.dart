@@ -41,13 +41,13 @@ void main() {
   });
 
   test('Ellipse construction', () {
-    final ellipse = createEllipse(vec2(2, 2), vec2(1, 3), -3.1415 / 4);
+    final ellipse = createEllipse(vec2(2, 2), vec2(1, 3), -3.1415 / 6);
 
-    expect(ellipse.A, equals(0.5555761452421689));
-    expect(ellipse.B, equals(0.8888888879350348));
-    expect(ellipse.C, equals(0.5555349658689424));
-    expect(ellipse.D, equals(-4.000082356838745));
-    expect(ellipse.E, equals(-3.9999176393458393));
-    expect(ellipse.F, equals(6.9999999961845845));
+    expect(ellipse.A, equals(0.777789665132905));
+    expect(ellipse.B, equals(-0.7697866320946175));
+    expect(ellipse.C, equals(0.33332144597820607));
+    expect(ellipse.D, equals(-1.5715853963423851));
+    expect(ellipse.E, equals(0.20628748027641075));
+    expect(ellipse.F, equals(0.3652979160659744));
   });
 }
