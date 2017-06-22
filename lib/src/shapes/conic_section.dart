@@ -5,9 +5,13 @@
 part of euclid;
 
 class ConicSection {
-  final num A, B, C, D, E, F;
+  final double A, B, C, D, E, F;
 
-  ConicSection(this.A, this.B, this.C, this.D, this.E, this.F);
+  factory ConicSection(num A, num B, num C, num D, num E, num F) =>
+      new ConicSection._(A.toDouble(), B.toDouble(), C.toDouble(), D.toDouble(),
+          E.toDouble(), F.toDouble());
+
+  ConicSection._(this.A, this.B, this.C, this.D, this.E, this.F);
 
   /// |  A  B/2 D/2 |
   /// | B/2  C  E/2 |

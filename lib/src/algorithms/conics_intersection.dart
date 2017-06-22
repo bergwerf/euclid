@@ -131,6 +131,7 @@ Tuple2<Vector3, Vector3> _decomposeDegenerateConic(Matrix3 c, int rank) {
   }
 
   // Recover lines.
+  // Note that Matrix3 is stored in column-major order.
   final maxV = maxN(C.storage);
   final ci1 = C.storage.indexOf(maxV);
   final j = (ci1 / 3).floor();

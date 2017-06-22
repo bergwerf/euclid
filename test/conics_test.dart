@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 import 'package:euclid/euclid.dart';
 
 void main() {
-  test('Conic intersections', () {
+  test('Ellipse-ellipse intersection using conics', () {
     final a =
         new ConicSection(-349.9, 377.59, -785.68, 3032.65, 3093.44, -11736.67);
     final b =
@@ -40,7 +40,7 @@ void main() {
     // Values are valid, see: https://www.desmos.com/calculator/kkjjxpsnvd.
   });
 
-  test('Ellipse construction', () {
+  test('Ellipse conic construction', () {
     final ellipse = createEllipse(vec2(2, 2), vec2(1, 3), -3.1415 / 6);
 
     expect(ellipse.A, equals(0.777789665132905));
@@ -61,4 +61,20 @@ void main() {
     expect(line.E, equals(-1));
     expect(line.F, equals(6));
   });
+
+  test('Circle-line intersection using conics', () {
+    final line = createLineConic(vec2(0, 0), vec2(1, 1));
+    final circ = createEllipse(vec2(0, 0), vec2(1, 1), 0);
+    final out = intersectConics(circ.homogeneousMatrix, line.homogeneousMatrix);
+
+    expect(out[0], equals(vec2(0.7071067690849304, 0.7071067690849304)));
+    expect(out[1], equals(vec2(-0.7071067690849304, -0.7071067690849304)));
+  });
+
+  test('Ellipse-line intersection using conics', () {
+    final line = createLineConic(vec2(3, 1), vec2(1, -1));
+    final ell = createEllipse(vec2(1, 1), vec2(2, 1), 1);
+    final out = intersectConics(line.homogeneousMatrix, ell.homogeneousMatrix);
+    // TODO: fix
+  }, skip: true);
 }
