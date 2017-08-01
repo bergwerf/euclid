@@ -73,7 +73,7 @@ int _computeRank(List<List<double>> mat) {
 }
 
 /// Compute matrix rank.
-int rank(dynamic mat) {
+int rank(mat) {
   if (mat is Matrix2) {
     return _computeRank([mat.row0.storage, mat.row1.storage]);
   } else if (mat is Matrix3) {

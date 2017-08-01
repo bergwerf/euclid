@@ -120,7 +120,7 @@ Tuple2<Vector3, Vector3> _decomposeDegenerateConic(Matrix3 c, int rank) {
     final maxV = maxN(d.storage);
     final di1 = d.storage.indexOf(maxV);
     if (B.entry(di1, di1) < 0) {
-      return new Tuple2(null, null);
+      return const Tuple2(null, null);
     }
     final b = sqrt(B.entry(di1, di1));
     final p = B.getColumn(di1) / b;

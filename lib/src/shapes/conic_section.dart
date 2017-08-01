@@ -20,5 +20,5 @@ class ConicSection {
       new Matrix3(A, B / 2, D / 2, B / 2, C, E / 2, D / 2, E / 2, F);
 
   @override
-  String toString() => '${A}x^2 + ${B}xy + ${C}y^2 + ${D}x + ${E}y + ${F} = 0';
+  String toString() => '${A}x^2 + ${B}xy + ${C}y^2 + ${D}x + ${E}y + $F = 0';
 }
