@@ -22,20 +22,20 @@ void main() {
     expect(ac.length, equals(4));
     expect(bc.length, equals(4));
 
-    expect(ab[0], equals(vec2(9.246224403381348, 4.67769193649292)));
-    expect(ab[1], equals(vec2(5.56899881362915, 1.3882734775543213)));
-    expect(ab[2], equals(vec2(3.070133924484253, 2.5090131759643555)));
-    expect(ab[3], equals(vec2(5.4805474281311035, 5.1920576095581055)));
+    expect(ab[0], equals(vec2(3.0701329708099365, 2.5090177059173584)));
+    expect(ab[1], equals(vec2(5.480583190917969, 5.192071437835693)));
+    expect(ab[2], equals(vec2(9.246254920959473, 4.677626132965088)));
+    expect(ab[3], equals(vec2(5.569156169891357, 1.3882912397384644)));
 
-    expect(ac[0], equals(vec2(6.448883056640625, 1.5661029815673828)));
-    expect(ac[1], equals(vec2(3.8758091926574707, 1.5801533460617065)));
+    expect(ac[0], equals(vec2(6.448883056640625, 1.5661028623580933)));
+    expect(ac[1], equals(vec2(3.8758091926574707, 1.5801531076431274)));
     expect(ac[2], equals(vec2(5.918144226074219, 5.34121036529541)));
     expect(ac[3], equals(vec2(3.3073794841766357, 3.5332531929016113)));
 
-    expect(bc[0], equals(vec2(5.519636154174805, 5.760214328765869)));
-    expect(bc[1], equals(vec2(3.4399685859680176, 2.660158157348633)));
-    expect(bc[2], equals(vec2(6.620107173919678, 3.5789847373962402)));
-    expect(bc[3], equals(vec2(5.520240783691406, 0.6001523733139038)));
+    expect(bc[0], equals(vec2(5.519637107849121, 5.760215759277344)));
+    expect(bc[1], equals(vec2(3.4399678707122803, 2.6601574420928955)));
+    expect(bc[2], equals(vec2(6.620107650756836, 3.5789835453033447)));
+    expect(bc[3], equals(vec2(5.5202412605285645, 0.6001520156860352)));
 
     // Values are valid, see: https://www.desmos.com/calculator/kkjjxpsnvd.
   });
@@ -75,6 +75,8 @@ void main() {
     final line = createLineConic(vec2(3, 1), vec2(1, -1));
     final ell = createEllipse(vec2(1, 1), vec2(2, 1), 1);
     final out = intersectConics(line.homogeneousMatrix, ell.homogeneousMatrix);
-    // TODO: fix
-  }, skip: true);
+
+    expect(out[0], equals(vec2(1.3387603759765625, 2.6612396240234375)));
+    expect(out[1], equals(vec2(2.3381400108337402, 1.6618601083755493)));
+  });
 }

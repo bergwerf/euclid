@@ -116,7 +116,7 @@ Tuple2<Vector3, Vector3> _decomposeDegenerateConic(Matrix3 c, int rank) {
     final B = -_adjointSym3(c);
 
     // Detect intersection point p.
-    final d = diag3(c)..absolute();
+    final d = diag3(B)..absolute();
     final maxV = maxN(d.storage);
     final di1 = d.storage.indexOf(maxV);
     if (B.entry(di1, di1) < 0) {
