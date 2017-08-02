@@ -42,7 +42,7 @@ ConicSection createLineConic(Vector2 origin, Vector2 direction) {
   // ax + -1y + b = 0
   // a = dx / dy
   // b = -ax + y
-  final a = direction.x / direction.y;
+  final a = direction.y / direction.x;
   final b = -a * origin.x + origin.y;
   return new ConicSection(0, 0, 0, a, -1, b);
 }
